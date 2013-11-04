@@ -1,0 +1,163 @@
+<div data-role="page" id="page1">
+    <div data-role="header">
+        <h1> Gift finder </h1>
+    </div>
+    <div data-role="content">
+        <form id="form1">
+            <h5> Enter your credentials</h5>
+            <div data-role="fieldcontain">
+            <label for="User name">
+                User name
+            </label>
+            <input  name="User name" id="User name" type="text">
+        </div>
+        <div data-role="fieldcontain">
+            <label for="Password">
+                Password
+            </label>
+            <input name="" id="Password" type="password">
+        </div>
+            <a id="Submit" data-inline="true" value="Submit" type="Submit" href="#Submit"> Submit</a> 
+             <br><br>
+            <a id="Sign up" data-role="button" data-inline="true" data-theme="c" href="#details">
+            Sign up
+        </a>
+            
+                </form>
+            <p id="err_msg"> Login Username and Password are incorrect</p>
+               
+        
+             </div></div>
+             <div id="details" data-role="page">
+                 <div data-role="header">
+                     <a data-rel="back" data-icon="home">Home</a>
+                     <h1> Sign up page </h1>
+                 </div>
+                 <div data-role="content">
+                     <div data-role="fieldcontain">
+            <label for="Name">
+                Name
+            </label>
+            <input name="" id="Name" placeholder="" value="" data-mini="true" type="text">
+        </div>
+        <div data-role="fieldcontain">
+            <label for="E-mail">
+                E-mail
+            </label>
+            <input name="" id="E-mail" placeholder="" value="" type="email">
+        </div>
+        <div data-role="fieldcontain">
+            <label for="u_password">
+                Password
+            </label>
+            <input name="" id="u_password" placeholder="" value="" type="password">
+        </div>
+        <div data-role="fieldcontain">
+            <label for="Address ">
+                Address
+            </label>
+            <textarea name="" id="Address " placeholder=""></textarea>
+        </div>
+             <button id="Save" data-inline="true" data-theme="b" value="Save">Save</button>
+            <p id="msg"></p>
+                 </div>
+            </div>
+                     
+                 <div id="Submit">
+                      <div data-role="header">
+                     <a data-rel="back" data-icon="home">Home</a>
+                     <h1> Submit page </h1>
+                 </div>
+                 <div data-role="content">
+                     <p id="sm"> 
+                             <a id="Add event" data-role="button" href="#mg">
+         Add event
+        </a>
+        <a id="Add image" data-role="button" href="#mg1">
+            Upload image
+        </a>
+                        <a id="Add members" data-role="button" target="_blank" data-transition="pop"
+        href="http://jsfiddle.net/sovd6/nXeh9/1/">
+            Add members
+        </a> 
+                         </p></div>
+                         </div>
+                         
+                         <div id="mg">
+                             <div data-role="header">
+                        <a data-rel="back" data-icon="home">Home</a>
+                     <h1> Event Details </h1>
+                 </div>     
+                             <div data-role="content">
+                <div data-role="fieldcontain">
+            <label for="Event Name">
+                Event Name
+            </label>
+            <select id="Event Name" name="">
+                <option value="">
+                    Christmas
+                </option>
+                <option value="date">
+                    Birthday
+                </option>
+                <option value="value">
+                    Wedding
+                </option>
+                <option value="value">
+                    Baby Shower
+                </option>
+                <option value="value">
+                    Option
+                </option>
+            </select>
+        </div>
+        <div data-role="fieldcontain">
+            <label for="Date">
+                Date of Event
+            </label>
+            <input name="" id="Date" placeholder="" value="" type="date">
+        </div>
+            <br>
+                <h5> Location of the event</h5>
+        <img id="Address" src="https://maps.googleapis.com/maps/api/staticmap?center=Kansas.MO&amp;zoom=14&amp;size=288x200&amp;markers=Kansas,MO&amp;sensor=false"
+        width="288" height="200">
+            <br>
+         
+                         </div>
+                         </div>
+                         <div id="mg1" data-role="page">
+                             <div data-role="header">
+                     <a data-rel="back" data-icon="home">Home</a>
+                     <h1> Add image page </h1>
+                 </div>
+                             <div data-role="content">
+                                 <div id="same" data-role="collapsible-set">
+            <div data-role="collapsible">
+                <h3>
+                    Image 1
+                </h3>
+            </div>
+            <div data-role="collapsible">
+                <h3>
+                    Image 2
+                </h3>
+            </div>
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>
+                    Image 3
+                </h3>
+            </div>
+        </div>
+                         <input id="idimage1" type="file" accept="image/*"/>
+<button type="button" id="btnup1" onclick="uploadImage1();">Upload Image 1</button>
+<div id="imgUrl1"></div>
+<div><img id="upImage1" src=""></div>
+    <input id="idimage2" type="file" accept="image/*"/>
+<button type="button" id="btnup2" onclick="uploadImage2();">Upload Image 2</button>
+<div id="imgUrl2"></div>
+<div><img id="upImage2" src=""></div>
+    <input id="idimage3" type="file" accept="image/*"/>
+<button type="button" id="btnup3" onclick="uploadImage3();">Upload Image 3</button>
+<div id="imgUrl3"></div>
+<div><img id="upImage3" src=""></div>
+    </div>

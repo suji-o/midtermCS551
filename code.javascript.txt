@@ -1,0 +1,99 @@
+$("#err_msg").hide();
+var uname=new Array();
+var pwd=new Array();
+var email=new Array();
+var address=new Array();
+var i=0;var n=3;
+
+$("#Save").button().bind("click",function(){
+uname[i]=""+$("#Name").val();
+    pwd[i]=""+$("#u_password").val();
+    email[i]=""+$("#E-mail").val();
+    address[i]=""+$("#Address").val();
+    i++;n=i;
+$("#msg").html("You are done "+uname[i-1]).show();
+});
+$("#Submit").button().bind("click",function(){
+    var temp=0;
+    for(temp=0;temp<n;temp++)
+    {
+    if($("#User name").val()!="suji"/*uname[temp]*/&&$("#Password").val()!="suji"/*pwd[temp]*/)
+    {
+        $("#err_msg").show();
+
+    }
+    else
+    {
+       // $("p").html("successful").show();
+               $("#sm").html(show());
+       // $("#form2").show();
+        $("#form1").hide();
+
+    }
+                                                                     return false; }
+});
+
+$("#mg1").button().bind("click",function(){
+if(uname[i]=="suji"&&pwd[i]=="suji")
+  $("#same").hide();
+    else
+       $("#same").show();
+});
+mobozi.init('123456789');
+function uploadImage1(){    
+    var myFile = document.getElementById('idimage1').files[0];
+    var imageData = {
+        "file": myFile 
+    }
+    mobozi.image.uploadGetUrl(imageData,function(response) { 
+        if (response.status == 201){
+            $('#imgUrl1').html('URL: ' + response.data.imageUrl);
+            $('#upImage1').attr('src',response.data.imageUrl);  
+        } else {
+            alert (response.error);
+        }
+    });
+}
+function uploadImage2(){    
+    var myFile = document.getElementById('idimage2').files[0];
+    var imageData = {
+        "file": myFile 
+    }
+    mobozi.image.uploadGetUrl(imageData,function(response) { 
+        if (response.status == 201){
+            $('#imgUrl2').html('URL: ' + response.data.imageUrl);
+            $('#upImage2').attr('src',response.data.imageUrl);  
+        } else {
+            alert (response.error);
+        }
+    });
+}
+function uploadImage3(){    
+    var myFile = document.getElementById('idimage3').files[0];
+    var imageData = {
+        "file": myFile 
+    }
+    mobozi.image.uploadGetUrl(imageData,function(response) { 
+        if (response.status == 201){
+            $('#imgUrl3').html('URL: ' + response.data.imageUrl);
+            $('#upImage3').attr('src',response.data.imageUrl);  
+        } else {
+            alert (response.error);
+        }
+    });
+}
+/*$('#f1').on("submit",function () {
+    if ($('input').val() !== '') {
+        var input_value = $('input').val();
+        $('ul').append('""+<li>' + input_value + '<a href="">x</a></li>');
+        //$('ul').append('<li>' + input_value '<a href="">x</a></li>');
+
+    };
+    $('input').val('');
+    return false;
+});
+
+$(document).on('click', 'a', function (e) {
+    e.preventDefault();
+    $(this).parent().remove();
+});*/
